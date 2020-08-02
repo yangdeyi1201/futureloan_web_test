@@ -21,5 +21,5 @@ administrator:
 
 host: 'http://120.78.128.25:8765'
 
-webdriverwait:
-  timeout: 10
+strftime_format:
+  '%Y-%m-%d-%H-%M-%S'

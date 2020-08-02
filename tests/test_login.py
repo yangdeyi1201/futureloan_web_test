@@ -18,7 +18,7 @@ class TestLogin:
         # 初始化页面，测试用到的页面
         login_page = PageLogin(driver)
         # 测试步骤：页面的行为，PO 中的方法
-        actual = login_page.login(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_error_msg()
+        actual = login_page.login_exception(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_error_msg()
         # 实际结果、预期结果比对
         # 异常处理：日志记录/测试结果回写
         try:
@@ -34,7 +34,7 @@ class TestLogin:
     def test_login_fail(self, case_info, driver):
         """手机号错误、密码或手机号为空的用例"""
         login_page = PageLogin(driver)
-        actual = login_page.login(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_fail_msg()
+        actual = login_page.login_exception(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_fail_msg()
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')
@@ -46,9 +46,9 @@ class TestLogin:
 
     @pytest.mark.parametrize('case_info', cases[8:])
     def test_login_success(self, case_info, driver):
-        """成功登录的用例"""
+        """正常登录的用例"""
         login_page = PageLogin(driver)
-        actual = login_page.login(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_success_msg()
+        actual = login_page.login_success(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_success_msg()
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')

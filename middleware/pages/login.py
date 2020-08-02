@@ -1,48 +1,62 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
 
+
+from common.basepage import BasePage
+from selenium.webdriver.common.by import By
 from middleware.handler import Handler
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions
+from middleware.pages.index import PageIndex
 
 
-class PageLogin:
+class PageLogin(BasePage):
     login_url = Handler.yaml_conf['host']+'/Index/login.html'
 
-    # 将要定位的元素抽离出测试代码，统一存放便于维护
-    username_locator = ('name', 'phone')
-    pwd_locator = ('name', 'password')
-    login_btn_locator = ('class name', 'btn')
-
-    error_msg_locator = ('class name', 'layui-layer-content')
-    fail_msg_error = ('class name', 'form-error-info')
-    success_msg_error = ('xpath', '//a[text()="我的帐户[小蜜蜂146177499]"]')
-
-    def __init__(self, driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, Handler.yaml_conf['webdriverwait']['timeout'])
+    def __init__(self, driver, timeout=10, poll_frequency=0.5):
+        super().__init__(driver, timeout, poll_frequency)
         return
 
-    def login(self, username, password):
+    # 将要定位的元素抽离出测试代码，统一存放便于维护
+    username_locator = (By.NAME, 'phone')
+    pwd_locator = (By.NAME, 'password')
+    login_btn_locator = (By.CLASS_NAME, 'btn')
+
+    error_msg_locator = (By.CLASS_NAME, 'layui-layer-content')
+    fail_msg_error = (By.CLASS_NAME, 'form-error-info')
+
+    def login_exception(self, username, password):
         """
+        异常登录步骤
         username 登录用户名
         password 登录密码
         返回 self 链式调用：调用登录后继续调用获取预期结果
         """
         self.driver.get(self.login_url)
-        self.driver.find_element(*self.username_locator).send_keys(username)
-        self.driver.find_element(*self.pwd_locator).send_keys(password)
-        self.driver.find_element(*self.login_btn_locator).click()
+        self.write(locator=self.username_locator, value=username)
+        self.write(locator=self.pwd_locator, value=password)
+        self.click(locator=self.login_btn_locator)
         return self
+
+    def login_success(self, username, password):
+        """
+        正常登录步骤
+        username 登录用户名
+        password 登录密码
+        返回首页页面
+        """
+        self.driver.get(self.login_url)
+        self.write(locator=self.username_locator, value=username)
+        self.write(locator=self.pwd_locator, value=password)
+        self.click(locator=self.login_btn_locator)
+        return PageIndex(self.driver)
 
     def get_error_msg(self):
         """获取密码错误预期结果"""
-        return self.wait.until(expected_conditions.visibility_of_element_located(self.error_msg_locator)).text
+        return self.get_visitable_elem_text(locator=self.error_msg_locator)
 
     def get_fail_msg(self):
         """获取手机号错误、密码或手机为空预期结果"""
-        return self.driver.find_element(*self.fail_msg_error).text
+        return self.get_visitable_elem_text(locator=self.fail_msg_error)
 
-    def get_success_msg(self):
-        """获取成功登录预期结果"""
-        return self.driver.find_element(*self.success_msg_error).text
+
+if __name__ == '__main__':
+    pass

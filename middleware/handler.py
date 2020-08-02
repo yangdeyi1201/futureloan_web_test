@@ -14,3 +14,9 @@ class Handler:
                         file_path=paths.LOGS_PATH/__log_config['filename'])
 
     excel = ExcelHandler(paths.DATA_PATH / yaml_conf['excel']['filename'])
+
+    tester = yaml_conf['tester']
+
+
+if __name__ == '__main__':
+    pass

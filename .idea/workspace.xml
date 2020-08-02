@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697424ba-95a2-4f3f-b46b-975e79515129" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/John.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/futureloan_web_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/handler_excel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/handler_log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/handler_yaml.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/paths.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/web_cases.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/pages/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/basepage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/pages/account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/pages/index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/pages/invest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_invest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/John.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/John.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/futureloan_web_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/futureloan_web_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/web_cases.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/web_cases.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/pages/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/pages/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/assets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +37,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tests/test_invest.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/middleware/pages/account.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1eX0I9kdXGDzHUnw0kFeC3WZdBF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,24 +53,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Dropbox\futureloan_web_test" />
+      <recent name="H:\Dropbox\futureloan_web_test\tests" />
+      <recent name="H:\Dropbox\futureloan_web_test\config" />
+      <recent name="H:\Dropbox\futureloan_web_test\class_06" />
+      <recent name="H:\Dropbox\futureloan_web_test\class_04" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Dropbox\futureloan_web_test\middleware" />
       <recent name="H:\Dropbox\futureloan_web_test\logs" />
       <recent name="H:\Dropbox\futureloan_web_test\config" />
       <recent name="H:\Dropbox\futureloan_web_test" />
       <recent name="H:\Dropbox\futureloan_web_test\common" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Dropbox\futureloan_web_test\config" />
-      <recent name="H:\Dropbox\futureloan_web_test\class_06" />
-      <recent name="H:\Dropbox\futureloan_web_test\class_04" />
-      <recent name="H:\Dropbox\futureloan_web_test" />
-      <recent name="H:\Dropbox\futureloan_web_test\class_02\pic" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -103,7 +95,9 @@
       <workItem from="1594878568914" duration="134402000" />
       <workItem from="1595563216092" duration="38000" />
       <workItem from="1595563265764" duration="23012000" />
-      <workItem from="1595696142544" duration="21282000" />
+      <workItem from="1595696142544" duration="30576000" />
+      <workItem from="1595880160450" duration="1493000" />
+      <workItem from="1595881807202" duration="152061000" />
     </task>
     <servers />
   </component>
@@ -111,82 +105,118 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="586" y="200" key="#Inspections" timestamp="1594455051752">
+    <state x="586" y="200" key="#Inspections" timestamp="1596194153658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="200" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1594455051752" />
-    <state x="1174" y="386" key="#Notifications" timestamp="1595685804250">
+    <state x="586" y="200" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1596194153658" />
+    <state x="1174" y="386" key="#Notifications" timestamp="1596136710647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1174" y="386" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595685804250" />
+    <state x="1174" y="386" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596136710647" />
     <state x="516" y="163" key="#Plugins" timestamp="1595260755225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="163" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1595260755225" />
-    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595714304930">
+    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596350760365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595714304930" />
+    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596350760365" />
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595702281645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595702281645" />
-    <state x="1234" y="379" key="FileChooserDialogImpl" timestamp="1595563250576">
+    <state x="1234" y="379" key="FileChooserDialogImpl" timestamp="1595880154933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1234" y="379" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595563250576" />
-    <state width="1047" height="249" key="GridCell.Tab.0.bottom" timestamp="1595714552557">
+    <state x="1234" y="379" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595880154933" />
+    <state width="1876" height="317" key="GridCell.Tab.0.bottom" timestamp="1596385726801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1047" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595714552557" />
-    <state width="1047" height="249" key="GridCell.Tab.0.center" timestamp="1595714552557">
+    <state width="1876" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596385726801" />
+    <state width="1876" height="317" key="GridCell.Tab.0.center" timestamp="1596385726801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1047" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595714552557" />
-    <state width="1047" height="249" key="GridCell.Tab.0.left" timestamp="1595714552557">
+    <state width="1876" height="317" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596385726801" />
+    <state width="1876" height="317" key="GridCell.Tab.0.left" timestamp="1596385726801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1047" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595714552557" />
-    <state width="1047" height="249" key="GridCell.Tab.0.right" timestamp="1595714552557">
+    <state width="1876" height="317" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596385726801" />
+    <state width="1876" height="317" key="GridCell.Tab.0.right" timestamp="1596385726801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1047" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595714552557" />
-    <state width="997" height="198" key="GridCell.Tab.1.bottom" timestamp="1595700089564">
+    <state width="1876" height="317" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596385726801" />
+    <state width="1876" height="200" key="GridCell.Tab.1.bottom" timestamp="1596243490607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="997" height="198" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595700089564" />
-    <state width="997" height="198" key="GridCell.Tab.1.center" timestamp="1595700089564">
+    <state width="1876" height="200" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596243490607" />
+    <state width="1876" height="200" key="GridCell.Tab.1.center" timestamp="1596243490607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="997" height="198" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595700089564" />
-    <state width="997" height="198" key="GridCell.Tab.1.left" timestamp="1595700089564">
+    <state width="1876" height="200" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596243490607" />
+    <state width="1876" height="200" key="GridCell.Tab.1.left" timestamp="1596243490607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="997" height="198" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595700089564" />
-    <state width="997" height="198" key="GridCell.Tab.1.right" timestamp="1595700089564">
+    <state width="1876" height="200" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596243490607" />
+    <state width="1876" height="200" key="GridCell.Tab.1.right" timestamp="1596243490607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="997" height="198" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595700089564" />
-    <state x="466" y="227" key="SettingsEditor" timestamp="1595741133139">
+    <state width="1876" height="200" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596243490607" />
+    <state x="466" y="227" key="SettingsEditor" timestamp="1595917222559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="466" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595741133139" />
-    <state x="0" y="0" width="960" height="1040" key="dock-window-1" timestamp="1595700115817">
+    <state x="466" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595917222559" />
+    <state x="0" y="0" width="916" height="717" key="dock-window-1" timestamp="1596040823524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="960" height="1040" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1595700115817" />
-    <state x="0" y="0" width="933" height="1040" key="dock-window-2" timestamp="1595737408640">
+    <state x="0" y="0" width="916" height="717" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1596040823524" />
+    <state x="955" y="0" width="874" height="1040" key="dock-window-10" timestamp="1596336869087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="933" height="1040" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1595737408640" />
-    <state x="0" y="0" width="960" height="1040" key="dock-window-3" timestamp="1595317189890">
+    <state x="955" y="0" width="874" height="1040" key="dock-window-10/0.0.1920.1040@0.0.1920.1040" timestamp="1596336869087" />
+    <state x="0" y="0" width="960" height="1040" key="dock-window-11" timestamp="1596338656248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" width="960" height="1040" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1595317189890" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595714559807">
+    <state x="0" y="0" width="960" height="1040" key="dock-window-11/0.0.1920.1040@0.0.1920.1040" timestamp="1596338656248" />
+    <state x="0" y="0" width="960" height="1040" key="dock-window-12" timestamp="1596346506031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595714559807" />
+    <state x="0" y="0" width="960" height="1040" key="dock-window-12/0.0.1920.1040@0.0.1920.1040" timestamp="1596346506031" />
+    <state x="0" y="0" width="791" height="1040" key="dock-window-2" timestamp="1596080669670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="791" height="1040" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1596080669670" />
+    <state x="615" y="148" width="916" height="997" key="dock-window-3" timestamp="1596093353674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="615" y="148" width="916" height="997" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1596093353674" />
+    <state x="960" y="0" width="960" height="1040" key="dock-window-4" timestamp="1596096271698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-4/0.0.1920.1040@0.0.1920.1040" timestamp="1596096271698" />
+    <state x="960" y="0" width="960" height="1040" key="dock-window-5" timestamp="1596176059836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-5/0.0.1920.1040@0.0.1920.1040" timestamp="1596176059836" />
+    <state x="0" y="0" width="960" height="1040" key="dock-window-6" timestamp="1596191535079">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="960" height="1040" key="dock-window-6/0.0.1920.1040@0.0.1920.1040" timestamp="1596191535079" />
+    <state x="0" y="0" width="960" height="1040" key="dock-window-7" timestamp="1596209455188">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="960" height="1040" key="dock-window-7/0.0.1920.1040@0.0.1920.1040" timestamp="1596209455188" />
+    <state x="960" y="0" width="960" height="1040" key="dock-window-8" timestamp="1596230611587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-8/0.0.1920.1040@0.0.1920.1040" timestamp="1596230611587" />
+    <state x="960" y="0" width="960" height="1040" key="dock-window-9" timestamp="1596241569091">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-9/0.0.1920.1040@0.0.1920.1040" timestamp="1596241569091" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596335829130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596335829130" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -196,6 +226,16 @@
           <line>4</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_invest.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_invest.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -203,32 +243,49 @@
     <SUITE FILE_PATH="coverage/futureloan_web_test$func.coverage" NAME="func Coverage Results" MODIFIED="1595354943174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$waiting_and_switching_xpath.coverage" NAME="waiting and switching_xpath Coverage Results" MODIFIED="1595268626914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../29 期 Python 自动化课程笔记/web 自动化测试/0714 三大等待三大切换/homework" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$select_action.coverage" NAME="select action Coverage Results" MODIFIED="1595320382213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_06" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_more_than_bid_amount.coverage" NAME="pytest for test_invest.TestInvest.test_invest_more_than_bid_amount Coverage Results" MODIFIED="1596349340786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$reduce_.coverage" NAME="reduce 函数 Coverage Results" MODIFIED="1595560855522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_login_TestLogin_test_login_error.coverage" NAME="pytest for test_login.TestLogin.test_login_error Coverage Results" MODIFIED="1596346659842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$drag_and_drop.coverage" NAME="drag and drop Coverage Results" MODIFIED="1595266579985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../29 期 Python 自动化课程笔记/web 自动化测试/0716 页面操作/homework" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_in_test_invest_py.coverage" NAME="pytest in test_invest.py Coverage Results" MODIFIED="1596216876766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_no_input.coverage" NAME="pytest for test_invest.TestInvest.test_invest_no_input Coverage Results" MODIFIED="1596348387784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$.coverage" NAME="文件上传 Coverage Results" MODIFIED="1595495400608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_07" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$conftest.coverage" NAME="conftest Coverage Results" MODIFIED="1595691653703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$keyboard_action.coverage" NAME="keyboard action Coverage Results" MODIFIED="1595308662584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_06" />
-    <SUITE FILE_PATH="coverage/futureloan_web_test$handler.coverage" NAME="handler Coverage Results" MODIFIED="1595714245585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/middleware" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest.coverage" NAME="pytest for test_invest.TestInvest Coverage Results" MODIFIED="1596349434990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$handler.coverage" NAME="handler Coverage Results" MODIFIED="1596004003892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/middleware" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_more_than_account_amount.coverage" NAME="pytest for test_invest.TestInvest.test_invest_more_than_account_amount Coverage Results" MODIFIED="1596348742153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$jenknis.coverage" NAME="jenknis Coverage Results" MODIFIED="1594631133656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_04" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$wait_and_switch.coverage" NAME="wait and switch Coverage Results" MODIFIED="1594812595786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_05" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$ketangpai_login.coverage" NAME="ketangpai_login Coverage Results" MODIFIED="1594957399464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/css" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$tes.coverage" NAME="tes Coverage Results" MODIFIED="1596190582640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$js_.coverage" NAME="js 脚本发送 Coverage Results" MODIFIED="1595477919491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_07" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$paths.coverage" NAME="paths Coverage Results" MODIFIED="1595916218546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$element_waiting.coverage" NAME="element waiting Coverage Results" MODIFIED="1594891086828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_05" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$map_.coverage" NAME="map 函数 Coverage Results" MODIFIED="1595558020121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python 进阶知识" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_success.coverage" NAME="pytest for test_invest.TestInvest.test_invest_success Coverage Results" MODIFIED="1596349986315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$num.coverage" NAME="num Coverage Results" MODIFIED="1596172810978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_incorrect_money.coverage" NAME="pytest for test_invest.TestInvest.test_invest_incorrect_money Coverage Results" MODIFIED="1596348190065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$123.coverage" NAME="123 Coverage Results" MODIFIED="1594883271415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$waiting_and_switching.coverage" NAME="waiting and switching Coverage Results" MODIFIED="1594957919373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/css" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$ma.coverage" NAME="ma Coverage Results" MODIFIED="1596185484896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$mouse_action.coverage" NAME="mouse action Coverage Results" MODIFIED="1595276329452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_06" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$ketangpai_element.coverage" NAME="ketangpai_element Coverage Results" MODIFIED="1594775659908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../29 期 Python 自动化课程笔记/web 自动化测试/0709 元素定位/homework" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$ketangpai.coverage" NAME="ketangpai Coverage Results" MODIFIED="1594657436745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_04" />
-    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_in_test_login_py.coverage" NAME="pytest in test_login.py Coverage Results" MODIFIED="1595702204802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/futureloan_web_test$test_login.coverage" NAME="test_login Coverage Results" MODIFIED="1595690488227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_in_test_login_py.coverage" NAME="pytest in test_login.py Coverage Results" MODIFIED="1595884494947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$test_login.coverage" NAME="test_login Coverage Results" MODIFIED="1595884969295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_without_login.coverage" NAME="pytest for test_invest.TestInvest.test_invest_without_login Coverage Results" MODIFIED="1596348327043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$login_page.coverage" NAME="login_page Coverage Results" MODIFIED="1595691615488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/middleware/page" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$ketangpai_element_css.coverage" NAME="ketangpai_element_css Coverage Results" MODIFIED="1595115955843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../29 期 Python 自动化课程笔记/web 自动化测试/0709 元素定位/homework" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$invest.coverage" NAME="invest Coverage Results" MODIFIED="1596006092593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/middleware/pages" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$xpath.coverage" NAME="xpath Coverage Results" MODIFIED="1594701967082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_04" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_not_100_times.coverage" NAME="pytest for test_invest.TestInvest.test_invest_not_100_times Coverage Results" MODIFIED="1596348513768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$switch.coverage" NAME="switch Coverage Results" MODIFIED="1594893170727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_05" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$mouse_and__keyboard.coverage" NAME="mouse and  keyboard Coverage Results" MODIFIED="1595141490548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_06" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$iframe_switch.coverage" NAME="iframe_switch Coverage Results" MODIFIED="1595268889783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_05" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_invest_TestInvest_test_invest_bid_expired.coverage" NAME="pytest for test_invest.TestInvest.test_invest_bid_expired Coverage Results" MODIFIED="1596289785964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$run.coverage" NAME="run Coverage Results" MODIFIED="1596350755386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_login_TestLogin_test_login_success.coverage" NAME="pytest for test_login.TestLogin.test_login_success Coverage Results" MODIFIED="1595698331987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/futureloan_web_test$test.coverage" NAME="test Coverage Results" MODIFIED="1595700096947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$test.coverage" NAME="test Coverage Results" MODIFIED="1596040420795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
