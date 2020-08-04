@@ -1,6 +1,7 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
 import pytest
+import allure
 from middleware.handler import Handler
 from middleware.pages.index import PageIndex
 
@@ -9,8 +10,10 @@ cases = excel.read_sheet('invest')
 logger = Handler.logger
 
 
+@allure.feature('投资模块')
 class TestInvest:
     @pytest.mark.parametrize('case_info', cases[11:12])
+    @allure.severity(allure.severity_level.NORMAL)
     def test_invest_without_login(self, case_info, driver):
         """未登录进行投资"""
         actual = PageIndex(driver).get_homepage().get_invest_list().invest_input_money(eval(case_info['data'])['amount']).get_msg_please_login()
@@ -24,6 +27,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[10:11])
+    @allure.severity(allure.severity_level.NORMAL)
     def test_invest_no_input(self, case_info, login):
         """不输入投资金额"""
         actual = login.get_invest_list().invest_no_input(eval(case_info['data'])['amount']).get_msg_no_input()
@@ -37,6 +41,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[6:10])
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_invest_incorrect_money(self, case_info, login):
         """投资金额输入 0、-100、-200 元 / 全空格"""
         warning = login.get_invest_list().invest_input_money(eval(case_info['data'])['amount'])
@@ -52,6 +57,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[:2])
+    @allure.severity(allure.severity_level.NORMAL)
     def test_invest_not_100_times(self, case_info, login):
         """投资金额输入非 100 整数倍：90 元 / 110 元"""
         warning = login.get_invest_list().invest_input_money(eval(case_info['data'])['amount'])
@@ -67,6 +73,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[3:4])
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_invest_more_than_bid_amount(self, case_info, login):
         """标剩余可投金额 ＜ 投资金额（100 正整数倍） ≤ 投资账户余额"""
         invest_page = login.get_invest_list()
@@ -84,6 +91,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[2:3])
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_invest_more_than_account_amount(self, case_info, login):
         """投资账户余额 ＜ 投资金额（100 正整数倍） ≤ 标剩余可投金额"""
         account_leave_amount = login.into_my_account().get_account_leave_amount
@@ -102,6 +110,7 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[14:16])
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_invest_success(self, case_info, login):
         """投资成功"""
         from decimal import Decimal
@@ -124,8 +133,9 @@ class TestInvest:
             logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
-    @pytest.mark.parametrize('case_info', cases[13:14])
     @pytest.mark.expired
+    @pytest.mark.parametrize('case_info', cases[13:14])
+    @allure.severity(allure.severity_level.NORMAL)
     def test_invest_bid_expired(self, case_info, login):
         """ 竞标到期"""
         warning = login.get_invest_list().invest_input_money(eval(case_info['data'])['amount'])

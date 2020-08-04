@@ -1,6 +1,7 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
 import pytest
+import allure
 from middleware.handler import Handler
 from middleware.pages.login import PageLogin
 
@@ -9,6 +10,9 @@ cases = excel.read_sheet('login')
 logger = Handler.logger
 
 
+@pytest.mark.login
+@allure.feature('登录模块')
+@allure.severity(allure.severity_level.CRITICAL)
 class TestLogin:
     """登录功能测试类"""
     @pytest.mark.parametrize('case_info', cases[:2])

@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.action_chains import ActionChains
 from middleware.handler import Handler
+import allure
 
 
 class BasePage:
@@ -81,4 +82,9 @@ class BasePage:
         from datetime import datetime
         from config.paths import SCREENSHOOTS_PATH
         ts = datetime.now().strftime(Handler.yaml_conf['strftime_format'])
-        self.driver.save_screenshot(filename=str(SCREENSHOOTS_PATH/f'screenshoot-{ts}.png'))
+        file_name = str(SCREENSHOOTS_PATH/f'screenshoot-{ts}.png')
+        self.driver.save_screenshot(filename=file_name)
+        with open(file=file_name, mode='rb') as f:
+            file = f.read()
+        allure.attach(body=file, name='异常截图', attachment_type=allure.attachment_type.PNG)
+        Handler.logger.info(f'页面截图文件保存在{file_name}')
