@@ -4,6 +4,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.action_chains import ActionChains
+from middleware.handler import Handler
 
 
 class BasePage:
@@ -15,18 +16,30 @@ class BasePage:
 
     def wait_elem_clickable(self, locator):
         """显示等待元素可被点击"""
-        elem = self.wait.until(expected_conditions.element_to_be_clickable(locator=locator))
-        return elem
+        try:
+            elem = self.wait.until(expected_conditions.element_to_be_clickable(locator=locator))
+            return elem
+        except:
+            self.screen_shoot()
+            Handler.logger.error(f'元素{locator}找不到')
 
     def wait_elem_visitable(self, locator):
         """显示等待元素页面可见"""
-        elem = self.wait.until(expected_conditions.visibility_of_element_located(locator=locator))
-        return elem
+        try:
+            elem = self.wait.until(expected_conditions.visibility_of_element_located(locator=locator))
+            return elem
+        except:
+            self.screen_shoot()
+            Handler.logger.error(f'元素{locator}找不到')
 
     def wait_elem_presence(self, locator):
         """显示等待元素源码中出现"""
-        elem = self.wait.until(expected_conditions.presence_of_element_located(locator=locator))
-        return elem
+        try:
+            elem = self.wait.until(expected_conditions.presence_of_element_located(locator=locator))
+            return elem
+        except:
+            self.screen_shoot()
+            Handler.logger.error(f'元素{locator}找不到')
 
     def click(self, locator):
         """点击某个元素"""
@@ -62,3 +75,10 @@ class BasePage:
         """切换至alert弹框"""
         alert = self.wait.until(expected_conditions.alert_is_present())
         return alert
+
+    def screen_shoot(self):
+        """截图"""
+        from datetime import datetime
+        from config.paths import SCREENSHOOTS_PATH
+        ts = datetime.now().strftime(Handler.yaml_conf['strftime_format'])
+        self.driver.save_screenshot(filename=str(SCREENSHOOTS_PATH/f'screenshoot-{ts}.png'))

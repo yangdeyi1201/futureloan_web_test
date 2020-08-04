@@ -8,8 +8,9 @@ from middleware.pages.account import PageAccount
 
 class PageInvest(BasePage):
     invest_input_locator = (By.CLASS_NAME, 'invest-unit-investinput')
-    invest_button_locator = (By.CLASS_NAME, 'btn-special')
+    invest_button_locator = (By.XPATH, '//button[text()="投标"]')
 
+    success_msg_locator = (By.XPATH, '//a[text()="我的帐户[小蜜蜂146177499]"]')
     msg_success_invest_locator = (By.XPATH, '//div[text()="投标成功！"]')
     msg_check_and_activate_locator = (By.XPATH, '''//div[@class='layui-layer-content']//button[@onclick="location.href='/Member/index'"]''')
     msg_incorrect_money_locator = (By.XPATH, '//*[text()="请正确填写投标金额"]')
@@ -63,8 +64,8 @@ class PageInvest(BasePage):
         from middleware.pages.login import PageLogin
         input_phone = self.get_attribute(locator=PageLogin.username_locator, name='placeholder')
         input_pwd = self.get_attribute(locator=PageLogin.pwd_locator, name='placeholder')
-        click_login = self.driver.find_element(By.XPATH, '//button[text()="登录"]').text
-        tip = self.driver.find_element(By.CLASS_NAME, 'layui-layer-title').text
+        click_login = self.get_clickable_elem_text(locator=(By.XPATH, '//button[text()="登录"]'))
+        tip = self.get_visitable_elem_text(locator=(By.CLASS_NAME, 'layui-layer-title'))
         return input_phone, input_pwd, click_login, tip
 
     def get_msg_not_100_times(self):
@@ -103,15 +104,15 @@ class PageInvest(BasePage):
     @property
     def generate_more_than_bid_leave_amount(self):
         """产生投资金额：大于标剩余金额且小于等于帐户余额且为 100 正整数倍"""
-        m_str = self.get_visitable_elem_text(locator=self.bid_leave_amount_locator)
-        amount_with_unit = m_str.split('：')[1]
+        amount_with_unit = self.get_visitable_elem_text(locator=self.bid_leave_amount_locator).split('：')[1]
         from decimal import Decimal
-        if m_str[-1] == '万':
-            bid_leave_amount = Decimal(amount_with_unit.replace(amount_with_unit[-1], '')) * Decimal(str(10000))
-            return bid_leave_amount + Decimal(str(100))
-        elif m_str[-1] == '元':
+        if amount_with_unit[-1] == '万':
+            bid_leave_amount = Decimal(amount_with_unit.replace(amount_with_unit[-1], ''))*Decimal(str(10000))
+            more_than_bid_leave_amount = bid_leave_amount+Decimal(str(100))
+        elif amount_with_unit[-1] == '元':
             bid_leave_amount = Decimal(amount_with_unit.replace(amount_with_unit[-1], ''))
-            return bid_leave_amount + Decimal(str(100))
+            more_than_bid_leave_amount = bid_leave_amount+Decimal(str(100))
+        return more_than_bid_leave_amount
 
     @staticmethod
     def generate_more_than_account_leave_amount(account_leave_amount):
@@ -119,10 +120,11 @@ class PageInvest(BasePage):
         account_leave_amount：个人帐户余额
         产生投资金额：大于个人帐户余额且为 100 正整数倍
         """
-        from random import randint
         import math
+        from random import randint
         ceil_account_leave_amount = math.ceil(account_leave_amount)
         while True:
-            more_than_account_amount = randint(ceil_account_leave_amount, ceil_account_leave_amount + 10000)  # math.ceil() 向上取整
+            more_than_account_amount = randint(ceil_account_leave_amount,
+                                               ceil_account_leave_amount + 10000)  # math.ceil() 向上取整
             if more_than_account_amount % 100 == 0:
                 return more_than_account_amount

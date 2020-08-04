@@ -11,6 +11,8 @@ LOGS_PATH = Path(__file__).resolve().parents[1]/'logs'
 REPORTS_PATH = Path(__file__).resolve().parents[1]/'reports'
 '''测试用例目录路径'''
 TESTS_PATH = Path(__file__).resolve().parents[1]/'tests'
+"""WEB异常截图"""
+SCREENSHOOTS_PATH = Path(__file__).resolve().parents[1]/'logs'/'screenshoots'
 
 
 ''' 1、获取当前文件绝对路径 '''

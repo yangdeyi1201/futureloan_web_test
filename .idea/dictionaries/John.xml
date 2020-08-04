@@ -9,6 +9,8 @@
       <w>leaveamount</w>
       <w>pytest</w>
       <w>rmtree</w>
+      <w>screenshoot</w>
+      <w>screenshoots</w>
       <w>shutil</w>
       <w>strftime</w>
       <w>webdriverwait</w>

@@ -1,6 +1,5 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
-
 import pytest
 from middleware.handler import Handler
 from middleware.pages.login import PageLogin
@@ -24,10 +23,10 @@ class TestLogin:
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('login', case_info['case_id']+1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[2:8])
@@ -38,10 +37,10 @@ class TestLogin:
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[8:])
@@ -52,8 +51,8 @@ class TestLogin:
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise

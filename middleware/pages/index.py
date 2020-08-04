@@ -2,11 +2,10 @@
 # email:yangdeyi1201@foxmail.com
 
 from selenium.webdriver.common.by import By
-from middleware.pages.invest import PageInvest
-from middleware.handler import Handler
-from middleware.pages.account import PageAccount
-from selenium.webdriver.support import expected_conditions
 from common.basepage import BasePage
+from middleware.handler import Handler
+from middleware.pages.invest import PageInvest
+from middleware.pages.account import PageAccount
 
 
 class PageIndex(BasePage):

@@ -1,6 +1,8 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
 import pytest
+from flaky import flaky
+
 from middleware.handler import Handler
 from middleware.pages.index import PageIndex
 
@@ -9,6 +11,7 @@ cases = excel.read_sheet('invest')
 logger = Handler.logger
 
 
+@pytest.mark.invest
 class TestInvest:
     @pytest.mark.parametrize('case_info', cases[11:12])
     def test_invest_without_login(self, case_info, driver):
@@ -17,10 +20,10 @@ class TestInvest:
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[10:11])
@@ -30,10 +33,10 @@ class TestInvest:
         try:
             assert actual == case_info['expected_resp']
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id']+1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[6:10])
@@ -45,10 +48,10 @@ class TestInvest:
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id']+1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[:2])
@@ -60,46 +63,51 @@ class TestInvest:
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[3:4])
+    @flaky(max_runs=3, min_passes=1)
     def test_invest_more_than_bid_amount(self, case_info, login):
         """标剩余可投金额 ＜ 投资金额（100 正整数倍） ≤ 投资账户余额"""
-        more_than_bid_leave_amount = login.get_invest_list().generate_more_than_bid_leave_amount
-        warning = login.get_invest_list().invest_input_money(str(more_than_bid_leave_amount))
+        invest_page = login.get_invest_list()
+        more_than_bid_leave_amount = invest_page.generate_more_than_bid_leave_amount
+        warning = invest_page.invest_input_money(str(more_than_bid_leave_amount))
         actual = warning.get_msg_not_more_than_bid_amount()
         warning.confirm_warning()
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[2:3])
+    @flaky(max_runs=3, min_passes=1)
     def test_invest_more_than_account_amount(self, case_info, login):
         """投资账户余额 ＜ 投资金额（100 正整数倍） ≤ 标剩余可投金额"""
         account_leave_amount = login.into_my_account().get_account_leave_amount
-        more_than_account_leave_amount = login.get_invest_list().generate_more_than_account_leave_amount(account_leave_amount)
-        warning = login.get_invest_list().invest_input_money(str(more_than_account_leave_amount))
+        invest_page = login.get_invest_list()
+        more_than_account_leave_amount = invest_page.generate_more_than_account_leave_amount(account_leave_amount)
+        warning = invest_page.invest_input_money(str(more_than_account_leave_amount))
         actual = warning.get_msg_not_more_than_account_leave_amount()
         warning.confirm_warning()
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[14:16])
+    @flaky(max_runs=3, min_passes=1)
     def test_invest_success(self, case_info, login):
         """投资成功"""
         from decimal import Decimal
@@ -114,15 +122,16 @@ class TestInvest:
         try:
             assert actual == eval(case_info['expected_resp'])
             # 投资成功：投资前可用余额 - 投资金额 = 投资后可用余额
-            assert account_leave_amount_before-Decimal(str(invest_money)) == account_leave_amount_after
+            assert Decimal(str(account_leave_amount_before))-Decimal(str(invest_money)) == Decimal(str(account_leave_amount_after))
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
 
     @pytest.mark.parametrize('case_info', cases[13:14])
+    @pytest.mark.expired
     def test_invest_bid_expired(self, case_info, login):
         """ 竞标到期"""
         warning = login.get_invest_list().invest_input_money(eval(case_info['data'])['amount'])
@@ -131,8 +140,8 @@ class TestInvest:
         try:
             assert actual == eval(case_info['expected_resp'])
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info('测试用例通过')
+            logger.info(f'第{case_info["case_id"]}条测试用例通过')
         except AssertionError:
             excel.write_data('invest', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error('测试用例不通过')
+            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
             raise
