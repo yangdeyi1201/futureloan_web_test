@@ -4,6 +4,7 @@
 from common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from middleware.pages.account import PageAccount
+from selenium.webdriver.support import expected_conditions
 
 
 class PageInvest(BasePage):
@@ -21,8 +22,9 @@ class PageInvest(BasePage):
     bid_leave_amount_locator = (By.CLASS_NAME, 'money-left')
     confirm_warning_locator = (By.LINK_TEXT, '确认')
 
-    def __init__(self, driver, timeout=10, poll_frequency=0.5):
+    def __init__(self, driver, timeout=30, poll_frequency=0.5):
         super().__init__(driver, timeout, poll_frequency)
+        self.wait.until(expected_conditions.title_contains(title='社群P2P投资理财'))
         return
 
     def invest_no_input(self, money):

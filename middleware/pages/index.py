@@ -14,7 +14,7 @@ class PageIndex(BasePage):
     success_msg_locator = (By.XPATH, '//a[text()="我的帐户[小蜜蜂146177499]"]')
     invest_list_locator = (By.LINK_TEXT, '投标')
 
-    def __init__(self, driver, timeout=10, poll_frequency=0.5):
+    def __init__(self, driver, timeout=30, poll_frequency=0.5):
         super().__init__(driver, timeout, poll_frequency)
         return
 

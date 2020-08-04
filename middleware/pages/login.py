@@ -11,7 +11,7 @@ from middleware.pages.index import PageIndex
 class PageLogin(BasePage):
     login_url = Handler.yaml_conf['host']+'/Index/login.html'
 
-    def __init__(self, driver, timeout=10, poll_frequency=0.5):
+    def __init__(self, driver, timeout=30, poll_frequency=0.5):
         super().__init__(driver, timeout, poll_frequency)
         return
 
