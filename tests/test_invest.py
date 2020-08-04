@@ -1,8 +1,6 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
 import pytest
-from flaky import flaky
-
 from middleware.handler import Handler
 from middleware.pages.index import PageIndex
 
@@ -11,7 +9,6 @@ cases = excel.read_sheet('invest')
 logger = Handler.logger
 
 
-@pytest.mark.invest
 class TestInvest:
     @pytest.mark.parametrize('case_info', cases[11:12])
     def test_invest_without_login(self, case_info, driver):
@@ -70,7 +67,6 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[3:4])
-    @flaky(max_runs=3, min_passes=1)
     def test_invest_more_than_bid_amount(self, case_info, login):
         """标剩余可投金额 ＜ 投资金额（100 正整数倍） ≤ 投资账户余额"""
         invest_page = login.get_invest_list()
@@ -88,7 +84,6 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[2:3])
-    @flaky(max_runs=3, min_passes=1)
     def test_invest_more_than_account_amount(self, case_info, login):
         """投资账户余额 ＜ 投资金额（100 正整数倍） ≤ 标剩余可投金额"""
         account_leave_amount = login.into_my_account().get_account_leave_amount
@@ -107,7 +102,6 @@ class TestInvest:
             raise
 
     @pytest.mark.parametrize('case_info', cases[14:16])
-    @flaky(max_runs=3, min_passes=1)
     def test_invest_success(self, case_info, login):
         """投资成功"""
         from decimal import Decimal
