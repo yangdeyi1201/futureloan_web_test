@@ -14,7 +14,8 @@ if __name__ == '__main__':
     #     shutil.rmtree(allure_raw_path)
     # 再执行脚本生成 allure 报告，以确保 allure 报告最新
     # pytest.main(['-m', 'not expired', '--reruns', '3', '--reruns-delay', '5', '--alluredir=reports/allure-raw', '-s'])
-    pytest.main(['-m', 'not expired', '--alluredir=reports/allure-raw', '-s'])
+    # pytest.main(['-m', 'not expired', '--alluredir=reports/allure-raw', '-s'])
+    pytest.main(['-m', 'login', '--alluredir=reports/allure-raw', '-s'])
 
     # from datetime import datetime
     # from middleware.handler import Handler
