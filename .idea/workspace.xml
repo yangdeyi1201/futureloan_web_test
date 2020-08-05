@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697424ba-95a2-4f3f-b46b-975e79515129" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/futureloan_web_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/futureloan_web_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/web_cases.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/web_cases.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,7 @@
       <workItem from="1595563265764" duration="23012000" />
       <workItem from="1595696142544" duration="30576000" />
       <workItem from="1595880160450" duration="1493000" />
-      <workItem from="1595881807202" duration="227215000" />
+      <workItem from="1595881807202" duration="228321000" />
     </task>
     <servers />
   </component>
@@ -102,10 +106,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="516" y="163" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1595260755225" />
-    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596617448731">
+    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596619614011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596617448731" />
+    <state x="226" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596619614011" />
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595702281645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -114,22 +118,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1234" y="379" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596603750898" />
-    <state width="1876" height="211" key="GridCell.Tab.0.bottom" timestamp="1596617426218">
+    <state width="1293" height="206" key="GridCell.Tab.0.bottom" timestamp="1596619434410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="211" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596617426218" />
-    <state width="1876" height="211" key="GridCell.Tab.0.center" timestamp="1596617426218">
+    <state width="1293" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596619434410" />
+    <state width="1293" height="206" key="GridCell.Tab.0.center" timestamp="1596619434410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="211" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596617426218" />
-    <state width="1876" height="211" key="GridCell.Tab.0.left" timestamp="1596617426218">
+    <state width="1293" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596619434410" />
+    <state width="1293" height="206" key="GridCell.Tab.0.left" timestamp="1596619434410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="211" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596617426218" />
-    <state width="1876" height="211" key="GridCell.Tab.0.right" timestamp="1596617426218">
+    <state width="1293" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596619434410" />
+    <state width="1293" height="206" key="GridCell.Tab.0.right" timestamp="1596619434410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="211" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596617426218" />
+    <state width="1293" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596619434410" />
     <state width="1876" height="199" key="GridCell.Tab.1.bottom" timestamp="1596558388152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -146,10 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1876" height="199" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596558388152" />
-    <state x="466" y="227" key="SettingsEditor" timestamp="1596603684972">
+    <state x="466" y="227" key="SettingsEditor" timestamp="1596619607278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="466" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596603684972" />
+    <state x="466" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596619607278" />
     <state x="0" y="0" width="916" height="717" key="dock-window-1" timestamp="1596040823524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,7 +284,7 @@
     <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_login_TestLogin.coverage" NAME="pytest for test_login.TestLogin Coverage Results" MODIFIED="1596390251336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$0804.coverage" NAME="0804 Coverage Results" MODIFIED="1596524086403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$iframe_switch.coverage" NAME="iframe_switch Coverage Results" MODIFIED="1595268889783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_05" />
-    <SUITE FILE_PATH="coverage/futureloan_web_test$run.coverage" NAME="run Coverage Results" MODIFIED="1596617377937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/futureloan_web_test$run.coverage" NAME="run Coverage Results" MODIFIED="1596619582547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$pytest_for_test_login_TestLogin_test_login_success.coverage" NAME="pytest for test_login.TestLogin.test_login_success Coverage Results" MODIFIED="1595698331987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$test.coverage" NAME="test Coverage Results" MODIFIED="1596040420795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/futureloan_web_test$110.coverage" NAME="110 Coverage Results" MODIFIED="1596559520733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
