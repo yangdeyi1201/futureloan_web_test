@@ -10,7 +10,6 @@ cases = excel.read_sheet('login')
 logger = Handler.logger
 
 
-@pytest.mark.login
 @allure.feature('登录模块')
 @allure.severity(allure.severity_level.CRITICAL)
 class TestLogin:
