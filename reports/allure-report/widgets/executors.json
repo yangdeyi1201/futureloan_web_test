@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://localhost:8080/",
+  "buildOrder" : 53,
+  "buildName" : "futureloan_web_test #53",
+  "buildUrl" : "http://localhost:8080/job/futureloan_web_test/53/",
+  "reportName" : "AllureReport",
+  "reportUrl" : "http://localhost:8080/job/futureloan_web_test/53/allure"
+} ]

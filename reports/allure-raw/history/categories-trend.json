@@ -1,0 +1,8 @@
+[ {
+  "buildOrder" : 52,
+  "reportUrl" : "http://localhost:8080/job/futureloan_web_test/52/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "Test defects" : 1
+  }
+} ]

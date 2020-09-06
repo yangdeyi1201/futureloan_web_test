@@ -1,0 +1,107 @@
+{
+  "uid" : "70a496ebf29f18df",
+  "name" : "test_invest_not_100_times[case_info0]",
+  "fullName" : "tests.test_invest.TestInvest#test_invest_not_100_times",
+  "historyId" : "82c3dc3569cfbe94c294a16c4415de83",
+  "time" : {
+    "start" : 1599417729159,
+    "stop" : 1599417731022,
+    "duration" : 1863
+  },
+  "description" : "投资金额输入非 100 整数倍：90 元 / 110 元",
+  "descriptionHtml" : "<p>投资金额输入非 100 整数倍：90 元 / 110 元</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "投资金额输入非 100 整数倍：90 元 / 110 元",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "aac73dd0095a79a6",
+      "name" : "log",
+      "source" : "aac73dd0095a79a6.txt",
+      "type" : "text/plain",
+      "size" : 63
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "投资模块"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_invest"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestInvest"
+  }, {
+    "name" : "host",
+    "value" : "B85ProGamer"
+  }, {
+    "name" : "thread",
+    "value" : "10836-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_invest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'case_id': 1, 'title': '投资金额异常,非100正整数倍90元,\\n但投资金额≤标剩余可投金额,投资金额≤投资账户余额', 'data': '{\"amount\":90}', 'expected_resp': '(\"投标金额必须为100的倍数\",\"确认\")', 'status': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "2489eac5dd01917a",
+        "reportUrl" : "http://localhost:8080/job/futureloan_web_test/52/allure/#testresult/2489eac5dd01917a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1596644863046,
+          "stop" : 1596644884978,
+          "duration" : 21932
+        }
+      } ]
+    },
+    "tags" : [ "login" ]
+  },
+  "source" : "70a496ebf29f18df.json",
+  "parameterValues" : [ "{'case_id': 1, 'title': '投资金额异常,非100正整数倍90元,\\n但投资金额≤标剩余可投金额,投资金额≤投资账户余额', 'data': '{\"amount\":90}', 'expected_resp': '(\"投标金额必须为100的倍数\",\"确认\")', 'status': None}" ]
+}

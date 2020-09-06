@@ -1,0 +1,107 @@
+{
+  "uid" : "d66a1805f33f0777",
+  "name" : "test_invest_without_login[case_info0]",
+  "fullName" : "tests.test_invest.TestInvest#test_invest_without_login",
+  "historyId" : "5f4095385c83bef2d055f6d66b710333",
+  "time" : {
+    "start" : 1599417714749,
+    "stop" : 1599417720473,
+    "duration" : 5724
+  },
+  "description" : "未登录进行投资",
+  "descriptionHtml" : "<p>未登录进行投资</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "未登录进行投资",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6c929cf1496bceda",
+      "name" : "log",
+      "source" : "6c929cf1496bceda.txt",
+      "type" : "text/plain",
+      "size" : 64
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "投资模块"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_invest"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestInvest"
+  }, {
+    "name" : "host",
+    "value" : "B85ProGamer"
+  }, {
+    "name" : "thread",
+    "value" : "10836-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_invest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'case_id': 12, 'title': '实名用户未登录进行投资', 'data': '{\"amount\":100}', 'expected_resp': '(\"请输入手机号\",\"请输入密码\",\"登录\",\"登录前程贷\")', 'status': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f676edda36c7a442",
+        "reportUrl" : "http://localhost:8080/job/futureloan_web_test/52/allure/#testresult/f676edda36c7a442",
+        "status" : "passed",
+        "time" : {
+          "start" : 1596644687711,
+          "stop" : 1596644731410,
+          "duration" : 43699
+        }
+      } ]
+    },
+    "tags" : [ "login" ]
+  },
+  "source" : "d66a1805f33f0777.json",
+  "parameterValues" : [ "{'case_id': 12, 'title': '实名用户未登录进行投资', 'data': '{\"amount\":100}', 'expected_resp': '(\"请输入手机号\",\"请输入密码\",\"登录\",\"登录前程贷\")', 'status': None}" ]
+}

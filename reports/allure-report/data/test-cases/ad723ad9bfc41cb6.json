@@ -1,0 +1,107 @@
+{
+  "uid" : "ad723ad9bfc41cb6",
+  "name" : "test_invest_incorrect_money[case_info1]",
+  "fullName" : "tests.test_invest.TestInvest#test_invest_incorrect_money",
+  "historyId" : "9be78ae4e24669478edd74840dfbfdfb",
+  "time" : {
+    "start" : 1599417723724,
+    "stop" : 1599417725139,
+    "duration" : 1415
+  },
+  "description" : "投资金额输入 0、-100、-200 元 / 全空格",
+  "descriptionHtml" : "<p>投资金额输入 0、-100、-200 元 / 全空格</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "投资金额输入 0、-100、-200 元 / 全空格",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b340c31eb3a55aa9",
+      "name" : "log",
+      "source" : "b340c31eb3a55aa9.txt",
+      "type" : "text/plain",
+      "size" : 63
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "投资模块"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_invest"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestInvest"
+  }, {
+    "name" : "host",
+    "value" : "B85ProGamer"
+  }, {
+    "name" : "thread",
+    "value" : "10836-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_invest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case_info",
+    "value" : "{'case_id': 8, 'title': '投资金额异常,为空全空格', 'data': '{\"amount\":\" \"}', 'expected_resp': '(\"请正确填写投标金额\",\"确认\")', 'status': None}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a57524f35919f312",
+        "reportUrl" : "http://localhost:8080/job/futureloan_web_test/52/allure/#testresult/a57524f35919f312",
+        "status" : "passed",
+        "time" : {
+          "start" : 1596644796982,
+          "stop" : 1596644818995,
+          "duration" : 22013
+        }
+      } ]
+    },
+    "tags" : [ "login" ]
+  },
+  "source" : "ad723ad9bfc41cb6.json",
+  "parameterValues" : [ "{'case_id': 8, 'title': '投资金额异常,为空全空格', 'data': '{\"amount\":\" \"}', 'expected_resp': '(\"请正确填写投标金额\",\"确认\")', 'status': None}" ]
+}

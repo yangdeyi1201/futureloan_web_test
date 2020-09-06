@@ -1,0 +1,25 @@
+[ {
+  "buildOrder" : 53,
+  "reportUrl" : "http://localhost:8080/job/futureloan_web_test/53/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 3,
+    "skipped" : 0,
+    "passed" : 9,
+    "unknown" : 0,
+    "total" : 12
+  }
+}, {
+  "buildOrder" : 52,
+  "reportUrl" : "http://localhost:8080/job/futureloan_web_test/52/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 20,
+    "unknown" : 0,
+    "total" : 21
+  }
+} ]
