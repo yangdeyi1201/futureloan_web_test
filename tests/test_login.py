@@ -12,7 +12,6 @@ logger = Handler.logger
 
 @allure.feature('登录模块')
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.login
 class TestLogin:
     """登录功能测试类"""
     @pytest.mark.parametrize('case_info', cases[:2])

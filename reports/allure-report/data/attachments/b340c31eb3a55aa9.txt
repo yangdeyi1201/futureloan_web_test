@@ -1,1 +1,0 @@
-INFO     own_logger:test_invest.py:54 第8条测试用例通过
