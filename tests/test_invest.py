@@ -11,6 +11,7 @@ logger = Handler.logger
 
 
 @allure.feature('投资模块')
+@pytest.mark.login
 class TestInvest:
     @pytest.mark.parametrize('case_info', cases[11:12])
     @allure.severity(allure.severity_level.NORMAL)

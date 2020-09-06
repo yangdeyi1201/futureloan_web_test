@@ -86,5 +86,4 @@ class BasePage:
         self.driver.save_screenshot(filename=file_name)
         with open(file=file_name, mode='rb') as f:
             file = f.read()
-        allure.attach(body=file, name='异常截图', attachment_type=allure.attachment_type.PNG)
-        Handler.logger.info(f'页面截图文件保存在{file_name}')
+            allure.attach(body=file, name='异常截图', attachment_type=allure.attachment_type.PNG)
