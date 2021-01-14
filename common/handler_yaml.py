@@ -1,11 +1,16 @@
+# author:CC
+# email:yangdeyi1201@foxmail.com
+
 import yaml
 
 
 def read_yaml(yaml_path):
-    with open(yaml_path, encoding='UTF-8') as f:
-        return yaml.load(f, Loader=yaml.SafeLoader)
+    """读取yaml文件"""
+    with open(file=yaml_path, mode='rb') as f:
+        yaml_file = f.read()
+    yaml_conf = yaml.full_load(stream=yaml_file)
+    return yaml_conf
 
 
-def write_yaml(data, yaml_path):
-    with open(yaml_path, 'w', encoding='UTF-8') as f:
-        yaml.dump(data, f)
+if __name__ == '__main__':
+    pass

@@ -1,61 +1,39 @@
 # author:CC
 # email:yangdeyi1201@foxmail.com
+
 import pytest
-import allure
+from middleware.pages.page_login import PageLogin
 from middleware.handler import Handler
-from middleware.pages.login import PageLogin
 
-excel = Handler.excel
-cases = excel.read_sheet('login')
-logger = Handler.logger
+cases = Handler.excel.read_sheet('login')
 
 
-@allure.feature('登录模块')
-@allure.severity(allure.severity_level.CRITICAL)
 class TestLogin:
-    """登录功能测试类"""
-    @pytest.mark.parametrize('case_info', cases[:2])
-    def test_login_error(self, case_info, driver):
-        """密码错误的用例"""
-        # 初始化页面，测试用到的页面
+    @pytest.mark.parametrize('case_info', cases)
+    def test_login(self, case_info, driver):
         login_page = PageLogin(driver)
-        # 测试步骤：页面的行为，PO 中的方法
-        actual = login_page.login_exception(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_error_msg()
-        # 实际结果、预期结果比对
-        # 异常处理：日志记录/测试结果回写
+
+        if 1 <= case_info['case_id'] <= 11:
+            after_login = login_page.login_fail(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd'])
+        elif case_info['case_id'] == 12:
+            after_login = login_page.login_success(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd'])
+
         try:
-            assert actual == case_info['expected_resp']
-            excel.write_data('login', case_info['case_id']+1, len(case_info), '通过')
-            logger.info(f'第{case_info["case_id"]}条测试用例通过')
-        except AssertionError:
-            excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
+            if 1 <= case_info['case_id'] <= 7:
+                assert after_login.get_msg_incorrect_phone() == case_info['expected_resp']
+            elif case_info['case_id'] == 8:
+                assert after_login.get_msg_none_phone() == case_info['expected_resp']
+            elif case_info['case_id'] in (9, 10):
+                assert after_login.get_msg_error() == case_info['expected_resp']
+            elif case_info['case_id'] == 11:
+                assert after_login.get_msg_none_pwd() == case_info['expected_resp']
+            elif case_info['case_id'] == 12:
+                assert after_login.get_msg_account() == case_info['expected_resp']
+            Handler.success_case('login', len(case_info), case_info['case_id'], __name__)
+        except:
+            Handler.fail_case('login', len(case_info), case_info['case_id'], __name__)
             raise
 
-    @pytest.mark.parametrize('case_info', cases[2:8])
-    def test_login_fail(self, case_info, driver):
-        """手机号错误、密码或手机号为空的用例"""
-        login_page = PageLogin(driver)
-        actual = login_page.login_exception(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_fail_msg()
-        try:
-            assert actual == case_info['expected_resp']
-            excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info(f'第{case_info["case_id"]}条测试用例通过')
-        except AssertionError:
-            excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
-            raise
 
-    @pytest.mark.parametrize('case_info', cases[8:])
-    def test_login_success(self, case_info, driver):
-        """正常登录的用例"""
-        login_page = PageLogin(driver)
-        actual = login_page.login_success(eval(case_info['data'])['mobile_phone'], eval(case_info['data'])['pwd']).get_success_msg()
-        try:
-            assert actual == case_info['expected_resp']
-            excel.write_data('login', case_info['case_id'] + 1, len(case_info), '通过')
-            logger.info(f'第{case_info["case_id"]}条测试用例通过')
-        except AssertionError:
-            excel.write_data('login', case_info['case_id'] + 1, len(case_info), '不通过')
-            logger.error(f'第{case_info["case_id"]}条测试用例不通过')
-            raise
+if __name__ == '__main__':
+    pytest.main(["--reruns", "3", "--reruns-delay", "5", "-s"])

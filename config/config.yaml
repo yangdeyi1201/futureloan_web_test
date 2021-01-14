@@ -1,25 +1,24 @@
-log:
-  filename: 'log.log'
-  logger_level: 'DEBUG'
-  console_level: 'DEBUG'
-  file_level: 'INFO'
-
 excel:
-  filename: 'web_cases.xlsx'
+  name: 'futureloan_web_test_pytest_version.xlsx'
+
+implicitly_wait: 20
+
+host: 'http://120.78.128.25:8765'
+
+fmt: '%Y-%m-%d-%H-%M-%S'
 
 tester:
   mobile_phone: '18584086762'
   pwd: 'yey1201abc'
 
-investor:
-  mobile_phone: '13981970269'
-  pwd: '12345678'
-
 administrator:
-  mobile_phone: '13982204699'
-  pwd: '12345678'
+  mobile_phone: '18581512456'
+  pwd: 'yey1201abc'
 
-host: 'http://120.78.128.25:8765'
+investor:
+  mobile_phone: '15883308876'
+  pwd: 'yey1201abc'
 
-strftime_format:
-  '%Y-%m-%d-%H-%M-%S'
+investor_id: 7961
+tester_id: 7953
+administrator_id: 7954
